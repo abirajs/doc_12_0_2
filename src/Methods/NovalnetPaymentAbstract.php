@@ -236,4 +236,14 @@ abstract class NovalnetPaymentAbstract extends PaymentMethodBaseService
         $icon = $app->getUrlPath('novalnet') . '/images/logos/' . strtolower($this::PAYMENT_KEY) .'_backend_icon.svg';
         return $icon;
     }
+
+    /**
+     * Check if this payment method should be active in the back end.
+     *
+     * @return bool
+     */
+    public function isBackendActive(): bool
+    {
+        return true;
+    }
 }
